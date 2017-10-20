@@ -1,6 +1,6 @@
 {
-  "name": "basho/riak",
-  "description": "Official Riak client for PHP",
+  "name": "phpfastcache/riak-client",
+  "description": "Riak client for PHP (Fork of the official basho/riak due to maintainer significant inactivity)",
   "type": "library",
   "keywords": [
     "basho",
@@ -14,20 +14,26 @@
     "crdt",
     "data"
   ],
-  "homepage": "http://basho.com/riak/",
+  "homepage": "https://github.com/PHPSocialNetwork/riak-php-client",
   "license": "Apache-2.0",
   "authors": [
+    {
+      "name": "Georges.L",
+      "email": "contact@geolim4.com",
+      "homepage": "https://github.com/Geolim4",
+      "role": "Maintainer"
+    },
     {
       "name": "Christopher Mancini",
       "email": "cmancini@basho.com",
       "homepage": "https://github.com/christophermancini",
-      "role": "Lead Developer"
+      "role": "Former Lead Developer"
     },
     {
       "name": "Alex Moore",
       "email": "amoore@basho.com",
       "homepage": "https://github.com/alexmoore",
-      "role": "Developer"
+      "role": "Former Developer"
     }
   ],
   "autoload": {
@@ -37,7 +43,10 @@
     "psr-4": {"Basho\\Tests\\": "tests/"}
   },
   "support": {
-    "issues": "https://github.com/basho/riak-php-client/issues"
+    "issues": "https://github.com/PHPSocialNetwork/riak-php-client/issues"
+  },
+  "conflict": {
+    "basho/riak": "*"
   },
   "require": {
     "php": ">=5.4",
