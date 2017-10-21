@@ -1,6 +1,7 @@
-# Riak Client for PHP
+# Riak Client for PHP (PhpFastCache Fork)
+#### (Fork of the official basho/riak due to maintainer significant inactivity)
 
-[![Packagist](https://img.shields.io/packagist/v/basho/riak.svg?maxAge=2592000)](https://packagist.org/packages/basho/riak)
+[![Packagist](https://img.shields.io/packagist/v/phpfastcache/riak-client.svg?maxAge=2592000)](https://packagist.org/packages/phpfastcache/riak-client)
 
 **Riak PHP Client** is a library which makes it easy to communicate with [Riak](http://basho.com/riak/), an open source, distributed database that focuses on high availability, horizontal scalability, and *predictable*
 latency. This library communicates with Riak's HTTP interface using the cURL extension. If you want to communicate with Riak using the Protocol Buffers interface, use the [Official PHP PB Client](https://github.com/basho/riak-phppb-client). Both Riak and this library are maintained by [Basho Technologies](http://www.basho.com/). 
@@ -19,24 +20,24 @@ To see other clients available for use with Riak visit our [Documentation Site](
 ## Installation
 
 ### Dependencies
-- PHP 5.4+
+- PHP 5.4+ (Up to PHP 7.2 with the 1.4.4 update provided by PhpFastCache)
 - PHP Extensions: curl, json and openssl [required for security features]
 - Riak 2.1+
 - [Composer PHP Dependency Manager](https://getcomposer.org/)
 
 ### Composer Install
 
-This library has been added to [Packagist](https://packagist.org/packages/basho/) to simplify the installation process. Run the following [composer](https://getcomposer.org/) command:
+This library has been added to [Packagist](https://packagist.org/packages/phpfastcache/) to simplify the installation process. Run the following [composer](https://getcomposer.org/) command:
 
 ```console
-$ composer require "basho/riak": "3.0.*"
+$ composer require "phpfastcache/riak-client": "^1.4.4"
 ```
 
 Alternately, manually add the following to your `composer.json`, in the `require` section:
 
 ```javascript
 "require": {
-    "basho/riak": "3.0.*"
+    "phpfastcache/riak-client": "^1.4.4"
 }
 ```
 
@@ -98,6 +99,10 @@ Thank you for being part of the community! We love you for it.
 
 ## License and Authors
 
+### Active authors
+* Author: Georges.L (https://github.com/Geolim4)
+
+### Former authors
 * Author: Christopher Mancini (https://github.com/christophermancini)
 * Author: Alex Moore (https://github.com/alexmoore)
 * Author: Luke Bakken (https://github.com/lukebakken)
