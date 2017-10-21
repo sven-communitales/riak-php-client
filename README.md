@@ -1,7 +1,7 @@
-# Riak PHP Client #
-This is the official PHP client for Riak.
+# Riak Client for PHP (PhpFastCache Fork)
+#### (Fork of the official basho/riak due to maintainer significant inactivity)
 
-[![Build Status](https://secure.travis-ci.org/basho/riak-php-client.png?branch=master)](http://travis-ci.org/basho/riak-php-client)
+[![Build Status](https://secure.travis-ci.org/phpfastcache/riak-client.png?branch=master)](http://travis-ci.org/phpfastcache/riak-client)
 
 ## Contributing
 This is an open source project licensed under the Apache 2.0 License. We encourage and welcome contributions to the
@@ -70,7 +70,7 @@ or as source from<br/>
 ## Installation ##
 Clone this repository to fetch the latest version of this client
 
-    git clone git://github.com/basho/riak-php-client.git
+    git clone git://github.com/PHPSocialNetwork/riak-php-client.git
 
 ## Quick start ##
 
@@ -134,10 +134,10 @@ Objects can be created using the Basho\Riak\Bucket::newObject() method
     # Create an object for future storage and populate it with some data
     $person = $bucket->newObject('riak_developer_1');
 
-or using the Basho\Riak\Object() constructor
+or using the Basho\Riak\DataObject() constructor
 
     # Create an object for future storage
-    $person = new Basho\Riak\Object($client, $bucket, 'riak_developer_1');
+    $person = new Basho\Riak\DataObject($client, $bucket, 'riak_developer_1');
 
 Both methods return an [Object](http://basho.github.io/riak-php-client/classes/Basho.Riak.Object.html)
 
