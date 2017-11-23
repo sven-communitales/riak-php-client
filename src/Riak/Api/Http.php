@@ -697,8 +697,10 @@ class Http extends Api implements ApiInterface
             case 'Basho\Riak\Command\KVObject\Keys\Fetch':
                 $data = json_decode($body);
                 $keys = [];
-                foreach ($data->keys as $key) {
-                    $keys[] = new Location($key, $this->command->getBucket());
+                if ($data && isset($data->keys)) {
+                    foreach ($data->keys as $key) {
+                        $keys[] = new Location($key, $this->command->getBucket());
+                    }
                 }
                 $response = new Command\KVObject\Keys\Response($this->success, $this->statusCode, $this->error, $keys);
                 break;
